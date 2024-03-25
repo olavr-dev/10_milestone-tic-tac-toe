@@ -86,6 +86,7 @@ body {
 }
 
 .btn-alt:hover {
-  background-color: hsl(280, 100%, 88%);
+  background-color: hsl(284, 65%, 24%);
   border-color: transparent;
+  color: hsl(0, 0%, 95%);
 }
