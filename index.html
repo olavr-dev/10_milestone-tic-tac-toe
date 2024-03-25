@@ -20,14 +20,14 @@
     <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="stylesheet" href="/styles/overlays.css" />
     <link rel="stylesheet" href="/styles/configuration.css" />
+    <link rel="stylesheet" href="/styles/game.css" />
   </head>
   <body>
+    <!-- Hidden Modal Backdrop -->
     <div id="backdrop"></div>
+    <!-- Header -->
     <header id="main-header">
-      <h1>
-        Play <i class="fa-solid fa-x"></i> Tic <i class="fa-solid fa-o"></i> Tac
-        <i class="fa-solid fa-x"></i> Toe
-      </h1>
+      <h1>Play Tic, Tac, Toe</h1>
       <p>
         Built with <i class="fa-brands fa-html5"></i> HTML
         <i class="fa-brands fa-css3-alt"></i> CSS
@@ -36,7 +36,9 @@
         <i class="fa-solid fa-mug-hot"></i> Coffee
       </p>
     </header>
+
     <main>
+      <!-- Start Modal -->
       <aside class="modal" id="config-overlay">
         <h2>Choose your name</h2>
         <form>
@@ -50,13 +52,14 @@
           </div>
         </form>
       </aside>
+      <!-- End Modal -->
       <section id="game-configuration">
         <ol>
           <li>
             <article>
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
-              <p><i class="fa-solid fa-x"></i></p>
+              <p class="player-symbol"><i class="fa-solid fa-x"></i></p>
               <button class="btn btn-alt">Edit</button>
             </article>
           </li>
@@ -64,7 +67,7 @@
             <article>
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
-              <p><i class="fa-solid fa-o"></i></p>
+              <p class="player-symbol"><i class="fa-solid fa-o"></i></p>
               <button class="btn btn-alt">Edit</button>
             </article>
           </li>
@@ -72,23 +75,23 @@
         <button class="btn">Start New Game</button>
       </section>
       <section id="active-game">
-        <article>
-          <h3>You won, <span id="winner-game">PLAYER NAME</span>!</h3>
-          <p>Click the "Start New Game" button to start a new game!</p>
+        <article id="game-over">
+          <h2>You won, <span id="winner-game">PLAYER NAME</span>!</h2>
+          <p>You can play again by clicking "Start New Game" above.</p>
         </article>
 
         <p>It's your turn, <span id="active-player-name">PLAYER NAME</span>!</p>
-        <ol>
-          <li></li>
-          <li></li>
-          <li></li>
+        <ol id="game-board">
+          <li class="disabled"><i class="fa-solid fa-x"></i></li>
+          <li class="disabled"><i class="fa-solid fa-o"></i></li>
+          <li class="disabled"><i class="fa-solid fa-x"></i></li>
 
+          <li class="disabled"><i class="fa-solid fa-x"></i></li>
           <li></li>
-          <li></li>
-          <li></li>
+          <li class="disabled"><i class="fa-solid fa-o"></i></li>
 
-          <li></li>
-          <li></li>
+          <li class="disabled"><i class="fa-solid fa-o"></i></li>
+          <li class="disabled"><i class="fa-solid fa-x"></i></li>
           <li></li>
         </ol>
       </section>

@@ -6,44 +6,32 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   color: hsl(0, 0%, 20%);
   background-color: hsl(0, 0%, 90%);
 }
 
 #main-header {
-  background-color: hsl(284, 65%, 24%);
+  background-color: hsl(285, 65%, 25%);
   color: hsl(0, 0%, 90%);
-  padding: 2rem 5%;
+  padding: 1.25rem 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#language {
-  text-align: end;
-}
-
 #main-header p {
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0;
+  font-size: 0.75rem;
+}
+
+#main-header h1 {
+  margin-top: 1rem;
 }
 
 #main-header i {
   margin-left: 0.5rem;
-}
-
-#main-header i.fa-x {
-  color: hsl(280, 100%, 50%);
-}
-
-#main-header i.fa-o {
-  color: hsl(300, 100%, 50%);
 }
 
 #main-header i.fa-html5 {
@@ -70,14 +58,19 @@ body {
   font: inherit;
   padding: 0.5rem 1.5rem;
   background-color: hsl(284, 65%, 24%);
-  border: 1px solid hsl(284, 65%, 24%);
+  border: 0.2rem solid hsl(284, 65%, 24%);
   color: hsl(0, 0%, 90%);
-  border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
+  border-radius: 0.15rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  -ms-border-radius: 0.15rem;
+  -o-border-radius: 0.15rem;
   cursor: pointer;
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
 }
 
 .btn-alt {
@@ -87,8 +80,9 @@ body {
 }
 
 .btn:hover {
-  background-color: hsl(275, 66%, 44%);
-  border-color: hsl(275, 66%, 44%);
+  background-color: hsl(0, 0%, 95%);
+  border-color: hsl(284, 65%, 24%);
+  color: hsl(284, 65%, 24%);
 }
 
 .btn-alt:hover {
