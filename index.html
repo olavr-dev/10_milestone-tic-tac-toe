@@ -36,7 +36,7 @@
         <i class="fa-brands fa-css3-alt"></i> CSS
         <i class="fa-brands fa-js"></i> JavaScript
         <i class="fa-solid fa-heart"></i> Love
-        <i class="fa-solid fa-mug-hot"></i> Coffee ☕
+        <i class="fa-solid fa-mug-hot"></i> Coffee
       </p>
     </header>
 
@@ -49,8 +49,9 @@
             <label for="player-name">Player Name</label>
             <input type="text" name="player-name" id="player-name" />
           </div>
+          <p id="config-errors"></p>
           <div>
-            <button type="button" class="btn btn-alt" id="cancel-config-button">
+            <button type="reset" class="btn btn-alt" id="cancel-config-button">
               Cancel
             </button>
             <button type="submit" class="btn">Confirm</button>
@@ -61,19 +62,23 @@
       <section id="game-configuration">
         <ol>
           <li>
-            <article>
+            <article id="player-1-data">
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol"><i class="fa-solid fa-x"></i></p>
-              <button class="btn btn-alt" id="edit-player-1-btn">Edit</button>
+              <button class="btn btn-alt" id="edit-player-1-btn" data-id="1">
+                Edit
+              </button>
             </article>
           </li>
           <li>
-            <article>
+            <article id="player-2-data">
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol"><i class="fa-solid fa-o"></i></p>
-              <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
+              <button class="btn btn-alt" id="edit-player-2-btn" data-id="2">
+                Edit
+              </button>
             </article>
           </li>
         </ol>
