@@ -11,6 +11,7 @@ function closePlayerConfig() {
   formElement.firstElementChild.classList.remove('error');
   errorsOutputElement.textContent = '';
   formElement.children[0].children[1].value = '';
+  startNewGameErrorElement.textContent = '';
 }
 
 function savePlayerConfig(event) {
