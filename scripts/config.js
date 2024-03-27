@@ -10,6 +10,7 @@ function closePlayerConfig() {
   backdropElement.style.display = 'none';
   formElement.firstElementChild.classList.remove('error');
   errorsOutputElement.textContent = '';
+  formElement.children[0].children[1].value = '';
 }
 
 function savePlayerConfig(event) {
@@ -30,5 +31,8 @@ function savePlayerConfig(event) {
     'player-' + editedPlayer + '-data'
   );
   updatedPlayerDataElement.children[1].textContent = enteredPlayerName;
+
+  players[editedPlayer - 1].name = enteredPlayerName;
+
   closePlayerConfig();
 }
