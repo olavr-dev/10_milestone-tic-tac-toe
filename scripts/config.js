@@ -1,5 +1,5 @@
 function openPlayerConfig(event) {
-  editedPlayer = +event.target.dataset.id; // +'1' => 1
+  editedPlayer = +event.target.dataset.playerid; // +'1' => 1
 
   playerConfigOverlayElement.style.display = 'block';
   backdropElement.style.display = 'block';
@@ -24,7 +24,6 @@ function savePlayerConfig(event) {
   if (!enteredPlayerName) {
     event.target.firstElementChild.classList.add('error');
     errorsOutputElement.textContent = 'Please enter a valid name';
-    console.dir(event.target.firstElementChild);
     return;
   }
 

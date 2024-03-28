@@ -29,9 +29,25 @@
   margin: 1.5rem 0;
 }
 
-#active-game p {
-  font-size: 1.5rem;
+#active-game {
+  font-size: 1.25rem;
   margin-bottom: 2rem;
+}
+
+#game-field-error {
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 1rem;
+  color: hsl(0, 90%, 50%);
+  background-color: hsl(0, 75%, 90%);
+  box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+  border: 2px solid hsl(0, 90%, 50%);
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  display: none;
 }
 
 #active-player-name {

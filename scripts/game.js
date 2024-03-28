@@ -17,7 +17,25 @@ function switchPlayer() {
 }
 
 function selectGameField(event) {
-  event.target.innerHTML = players[activePlayer].symbol;
-  event.target.classList.add('disabled');
+  if (event.target.tagName != 'LI') {
+    return;
+  }
+
+  const selectedField = event.target;
+  const selectedColumn = selectedField.dataset.col - 1;
+  const selectedRow = selectedField.dataset.row - 1;
+
+  if (gameData[selectedRow][selectedColumn] > 0) {
+    gameFieldErrorElement.style.display = 'block';
+    return;
+  }
+
+  selectedField.innerHTML = players[activePlayer].symbol;
+  selectedField.classList.add('disabled');
+
+  gameData[selectedRow][selectedColumn] = activePlayer + 1;
+  console.log(gameData);
+
+  gameFieldErrorElement.style.display = 'none';
   switchPlayer();
 }
