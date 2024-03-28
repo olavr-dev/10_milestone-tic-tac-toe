@@ -84,15 +84,15 @@
 #game-configuration h3 {
   margin: 1.5rem 0;
   font-size: 1.5rem;
-  color: hsl(285, 65%, 25%);
+  color: hsl(258, 54%, 33%);
 }
 
 .player-symbol {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(285, 65%, 25%);
-  border: 0.2rem solid hsl(285, 65%, 25%);
+  background-color: hsl(258, 54%, 33%);
+  border: 2px solid hsl(258, 54%, 33%);
   border-radius: 0.15rem;
   -webkit-border-radius: 0.15rem;
   -moz-border-radius: 0.15rem;
