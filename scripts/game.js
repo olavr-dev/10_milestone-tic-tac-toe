@@ -39,3 +39,32 @@ function selectGameField(event) {
   gameFieldErrorElement.style.display = 'none';
   switchPlayer();
 }
+
+function checkForGameOver() {
+  // Checking the rows for equality
+  for (let index = 0; index < 3; index++) {
+    if (
+      gameData[index][0] > 0 &&
+      gameData[index][0] === gameData[index][1] &&
+      gameData[index][1] === gameData[index][2]
+    ) {
+      return gameData[index][0];
+    }
+  }
+  // Checking the columns for equality
+  for (let index = 0; index < 3; index++) {
+    if (
+      gameData[0][index] > 0 &&
+      gameData[0][index] === gameData[1][index] &&
+      gameData[0][index] === gameData[2][index]
+    ) {
+      return gameData[0][index];
+    }
+  }
+  if (
+    gameData[0][0] > 0 &&
+    gameData[0][0] === gameData[1][1] &&
+    gameData[1][1] === gameData[2][2]
+  ) {
+  }
+}
