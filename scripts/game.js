@@ -34,9 +34,12 @@ function selectGameField(event) {
   selectedField.classList.add('disabled');
 
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
-  console.log(gameData);
+
+  const winnerId = checkForGameOver();
+  console.log(winnerId);
 
   gameFieldErrorElement.style.display = 'none';
+  currentRound++;
   switchPlayer();
 }
 
@@ -61,10 +64,24 @@ function checkForGameOver() {
       return gameData[0][index];
     }
   }
+  // Checking for diagonal equality - top left to bottom right
   if (
     gameData[0][0] > 0 &&
     gameData[0][0] === gameData[1][1] &&
     gameData[1][1] === gameData[2][2]
   ) {
+    return gameData[0][0];
   }
+  // Checking for diagonal equality - bottom left to top right
+  if (
+    gameData[2][0] > 0 &&
+    gameData[2][0] === gameData[1][1] &&
+    gameData[1][1] === gameData[0][2]
+  ) {
+    return gameData[2][0];
+  }
+  if (currentRound === 9) {
+    return -1;
+  }
+  return 0;
 }
